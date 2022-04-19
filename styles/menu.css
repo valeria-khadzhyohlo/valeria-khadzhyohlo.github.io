@@ -7,18 +7,18 @@ a:link,
 a:visited {
   color: black;
 }
-
 .home-buttons {
-  margin: 73px 10px;
+  margin: 68px 10px;
   padding: 10px 120px 10px 120px;
   background-color: transparent;
   border: 1px solid black;
 }
 
 .table {
-  margin-top: 150px;
-  margin-left: 90px;
-  margin-right: 90px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60vw;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -30,9 +30,8 @@ a:visited {
 }
 
 body {
-  width: 100%;
   background: var(--beige);
-  background-image: url('../pictures/Background.jpg');
+  background-image: url('../pictures/Background-2.jpg');
   background-repeat: no-repeat;
   text-align: center;
 }
@@ -46,8 +45,7 @@ p {
   text-align: justify;
   width: 565px;
   font-family: 'Raleway', sans-serif;
-  border: 0.5px black;
-  margin-left: 680px;
+  margin-left: 200px;
 }
 
 img {
@@ -55,6 +53,11 @@ img {
   display: block;
 }
 
+table {
+  width: 100%;
+}
 th {
-  padding: 0px 10px 0px 10px;
+  width: 50%;
+  text-align: justify;
+  padding: 0px 10px 100px 10px;
 }
