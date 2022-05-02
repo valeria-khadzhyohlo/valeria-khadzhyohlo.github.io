@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>javascript-dom</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale= 1.0" />
+    <link href="../../styles/main.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link href="<link" rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Codystar&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="favicon" href="pictures/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="../../index.html">HOME</a>
+      <a href="../tech.html">TECH</a>
+      <a href="../core.html">CORE</a>
+      <a href="../../index.html#about">ABOUT</a>
+    </div>
+
+    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+    <div id="main" class="main-container">
+      <h1>MAKE A DRESS OR LEARN JAVASCRIPT/DOM</h1>
+
+      <div class="main-info">
+        <div>
+          <h2>What is JavaScript?</h2>
+          <p>
+            JavaScript is a language that lets you dynamically update the
+            content of your page, control media and basically do most actions on
+            the page that HTML and CSS can’t . You can compare it to the process
+            of making a dress, for example you can dye your fabric in any colour
+            you like, you lay your pattern and cut your pieces, then you use
+            your sewing machine that can do various functions just as javascript
+            does.
+          </p>
+
+          <h2>[Arrays] and {objects}</h2>
+          <p>
+            It’s always good to keep your process well planned and working space
+            organised and you should do the same with your code. If the order
+            comes in a first place that you should store your data in array:
+          </p>
+          <p class="code">
+            <code>
+              var makeDress = [‘choosePattern’, prepareFabric’,
+              ‘cutPatternPieces’, ‘cutFabric’, ‘assembleDressPieces’]
+            </code>
+          </p>
+
+          <p>
+            When you retrieve information from an array you get it by index of
+            each element. Arrays always start counting from zero, so the first
+            element (‘chosePattern') in our array is 0 and the last one
+            (‘assembleDressPieces’) is 4. If you wanted to find out what is the
+            third action you need to do you would use:
+          </p>
+          <p class="code"><code>makeDress[2]</code></p>
+
+          <p>
+            There’s another way to organise your code, especially if data label
+            is more important for you than the order. Let’s organise our storage
+            using objects:
+          </p>
+          <p class="code">
+            <code
+              >thingsNeeded = { <br />&nbsp;fabric: '2m', <br />&nbsp;threads:
+              ['brown', 'white'],<br />
+              &nbsp;scissors: 'one',<br />
+              &nbsp;buttons: 10 }</code
+            >
+          </p>
+
+          <p class="code">
+            <code
+              >console.log(thingsNeeded)<br />{fabric: "2m", threads: Array(2),
+              scissors: "one", buttons: 10}</code
+            >
+          </p>
+
+          <p>
+            Our object represents key/value pairs. If you want to access amount
+            of buttons you have you’d try:
+          </p>
+          <p class="code">
+            <code
+              >thingsNeeded.butttons Or <br />
+              thingsNeeded[‘buttons’]</code
+            >
+          </p>
+          <p>
+            We can also store arrays inside of objects and objects inside of
+            arrays. To get the information we can use both key and index:
+          </p>
+          <p class="code">
+            <code>console.log(thingsNeeded['threads'][1]) //white</code>
+          </p>
+
+          <h2>Control flow</h2>
+          <p>
+            So to start making a dress we need some kind of plan so we know
+            where to start and what our next actions would be. In JavaScript we
+            have control flow, it’s an order on which all the statements are
+            being executed. Normally all the code is being run from left to
+            right, top to bottom unless it meets some statements such as loops,
+            conditionals or functions.
+          </p>
+          <h2>functions</h2>
+          <p>
+            Functions is a set of statements that performs a task that often
+            takes the input and returns the output. Let’s make a function of
+            assembling our dress pieces together. We can have out bodice, skirt
+            and sleeves as parameters :
+          </p>
+          <p class="code">
+            <code
+              >//DECLARING FUNCTION FOR SEWING A DRESS// <br />
+              function sewDress(bodiceFront,bodiceBack, skirt, sleeve1,
+              sleeve2){
+              <br />&nbsp;let dress = bodiceFront + bodiceBack + skirt + sleeve1
+              + sleeve2;<br />
+              &nbsp;return dress; } <br />//CALLING OUR FUNCTION//<br />
+              sewDress('front','back','skirt','sleeve1','sleeve2')</code
+            >
+          </p>
+
+          <p>
+            The cool thing about functions is that we can use the same one but
+            by changing parameters we can get different results, for example if
+            we want a shorter sleeve instead of long one or no sleeve at all.
+          </p>
+          <h2>Conditionals</h2>
+          <p>
+            If/else statement lets us check if the condition has been met or
+            not. For example, If we were assembling the pieces of our dress and
+            had to check if we still have enough thread we could write such
+            statement:
+          </p>
+          <p class="code">
+            <code
+              >let lengthOfThread = 500;<br />
+              if (lengthOfThread >= 5){ <br />
+              &nbsp;console.log('Keep sewing') <br />
+              } else if (lengthOfThread > 0){ <br />&nbsp;console.log("You're
+              close to running out of thread, please replace it.")
+              <br />}else{<br />
+              &nbsp;console.log("Sorry, you're out of thread") <br />}
+            </code>
+          </p>
+          <h2>Loops</h2>
+          <p>
+            Loops are iteration statements that keep running until the loop is
+            over or the condition becomes false. Let’s make a loop that helps us
+            attach buttons to our dress.
+          </p>
+          <p class="code">
+            <code
+              >let amountOfButtonholes = 10<br />
+              for (let button = 0; button <= amountOfButtonHoles; button++){<br />
+              &nbsp;console.log('Attaching ' + button + ' button')<br />
+              }
+            </code>
+          </p>
+          <h2>DOM</h2>
+          <p>So all these things can’t be made without something connecting them
+            together. In programming this function is taken over by DOM(Document
+            Object Model). It’s an API that connects your javascript to your HTML
+            and CSS. The DOM represents the document as nodes and objects; that
+            way, programming languages can interact with the page. It can be
+            modified with a scripting language like JavaScript. For example, to
+            select all the paragrafs in your document you’d use querySelectorAll method and the code
+              would look like this : </p>
+              <p class="code">
+                <code
+                  >let paragraf = document.querySelectorAll(‘p’)
+                </code>
+              </p>
+         
+              </code>
+            </p>
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
