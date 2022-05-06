@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>javascript-dom</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width initial-scale= 1.0" />
+  <link href="../../styles/main.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@900&display=swap" rel="stylesheet" />
+  <link rel="favicon" href="pictures/favicon.ico?v=2" type="image/x-icon" />
+</head>
+
+<body>
+  <div id="mySidenav" class="sidenav">
+    <a href="../../index.html">HOME</a>
+    <a href="../tech.html">TECH</a>
+    <a href="../core.html">CORE</a>
+    <a href="../../index.html#about">ABOUT</a>
+  </div>
+
+  <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+  <div id="main" class="main-container">
+    <div class="divider" style="color:white;">
+      PROBLEM SOLVING
+    </div>
+
+
+
+    <div class="main-info">
+      <p>
+        Problem solving is one of the essential skills of a good programmer. Its process includes defining a problem,
+        identifying the cause of the problem, selecting alternatives for a solution and finally implementing it.
+        <br>These a some of the problem solving techniques and some of them, such as Console.logging and error messages, are
+        are focused exclusively on programming problems:
+      </p>
+      <ul class="initial">
+        <li><a href="#pseudocode">Pseudocode</a></li>
+        <li><a href="#google">Googling</a></li>
+        <li><a href="#consoleLogging">Console.logging</a></li>
+        <li><a href="#ducky">Rubber ducky method</a></li>
+        <li><a href="#errors">Reading error messages</a></li>
+        <li><a href="#help">Asking your peers for help</a></li>
+        <li><a href="#help">Asking coaches for help</a></li>
+        <li><a href="#reflect">Improving your process with reflection</a></li>
+      </ul>
+    </div>
+    <div id='pseudocode' class="divider" style="color:white;">
+      PSEUDOCODE
+    </div>
+    <div class="main-info">
+      <p>
+        Let’s solve a simple version of a loved by everyone exercise FizzBuzz using each of those techniques.
+        It takes in a number and for multiples of 3 prints 'Fizz', for multiples of 5 prints 'Buzz'. For numbers that are
+        multiples of both 3 and 5 prints 'FizzBuzz'.
+      </p>
+      
+      
+      <p>
+        Pseudocode is a step-by-step written outline of your code that you transcribe into a programming language.
+        Basically, it’s an English translation of your code. Try to keep it simple and concise.
+      </p>
+    
+      <p class="code">
+        <code>
+          //DECLARING FUNCTION THAT RETURNS OUR NUMBER FIZZBUZZED<br>
+          function fizzbuzz(num) {<br>
+          //returning “Fizz” if number is a multiple of 3<br>
+          //returning “5Buzz” if number is a multiple of 5<br>
+          //returning “FizzBuzz” if number is a multiple of 15<br>
+          }
+        </code>
+      </p>
+    </div>
+    <div id="google" class="divider" style="color:white;">
+      GOOGLE
+    </div>
+    <div class="main-info">
+      <p>
+        NOW how do we return a multiple of 3 and 5?
+        Let’s B̶a̶c̶k̶R̶u̶b̶ Google it!
+      </p>
+      <img style="width:50%" src="../../pictures/problem-solving/google.png">
+      <p>And there we get it straight away. If only it was always so easy!</p>
+      <span>There are a few tips you could use to make your Google search better though:</span>
+      <p>
+        <b>Use quotes to match exact phrases:</b>
+        <br>“Array.push()”
+      </p>
+      <p>
+        <b>Exclude some words using -operator:</b>
+        <br><img style="width:50%; " src="../../pictures/problem-solving/tesla.png">
+      </p>
+      <p>
+        <b>Find a website similar to another website:</b>
+        <br>related:[yourwebsite]
+        <br>related:YouTube.com    //Vimeo
+      </p>
+    </div>
+    <div id="consoleLogging" class="divider" style="color:white;">
+      CONSOLE.LOGGING
+    </div>
+    <div class="main-info">
+      <p>
+        Console.logging is the method I personally use the most. I like to break my code in tiny little steps and solve
+        them little by little. It helps a lot, especially when you are just starting to learn how to code to see where you
+        made a mistake and you can always go back and try something different.
+      </p>
+      <img style="width:50%;" src="../../pictures/problem-solving/fizz.png">
+      <p>
+        Looking at this piece of code we don’t see any errors in our console but we understand that it doesn’t give us the
+        result we want and instead of ‘FizzBuzz’ we’re getting ‘Fizz’.
+      </p>
+      <p>
+        What might be the reason for that? It’s time to ask rubber ducky for help!
+      </p>
+    </div>
+    <div id="ducky class=" class="divider" style="color:white;">
+      RUBBER DUCKY METHOD
+    </div>
+    <div class="main-info">
+      <p>
+        Looking at that piece of code we don’t see any errors in our console but we understand that it doesn’t give us the
+        result we want and instead of ‘FizzBuzz’ we’re getting ‘Fizz’.
+      </p>
+      <img style="width:50%; border-radius: 10px; " src="../../pictures/problem-solving/nick-fewings-d5sK_-sVFSA-unsplash.jpg">
+      <p>
+        Of course this method doesn’t expect you to talk to toys even though nobody stops you. The whole idea behind it is
+        to be able to ask the right question. </p>
+      <p>Charles Kettering, who was head of research at General Motors from 1920 to
+        1947 said <span>“A Problem Well Stated is Half Solved” </span>.</p>
+      <p>We can be stuck on a problem for a long time without realising
+        that we don’t even know what the real problem is. So identifying it is a first step to solving it.</p>
+      <p>In our code we’re getting Fizz that we’re supposed to get for number 3, instead of FizzBuzz for given number 15.
+        The reason for it is control flow and how the code is being run, it always starts at the top, so in this case
+        because 15 is a multiple of 3 as well it returns True for the first statement and finishes the loop.
+        So now that we know what’s wrong we can just change the order of our code and see if it works.</p>
+      </p>
+      <img style="width:50%; border-radius: 10px;" src="../../pictures/problem-solving/fizzbuzz.png">
+      <p>
+        And it works! Thank you Ducky!
+      </p>
+    </div>
+    <div id="errors" class="divider" style="color:white;">
+      ERRORS
+    </div>
+    <div class="main-info">
+      <p>
+        How can there be programming without errors? Experiencing different types of errors in programming is a huge part
+        of the development process. The best developers become comfortable navigating the bugs they create and quickly
+        fixing them.
+      </p>
+      <p>
+        There are a few types of errors:
+      </p>
+      <img style="width:50%; border-radius: 10px; " src="../../pictures/problem-solving/Types-of-Errors-In-JavaScript.jpeg">
+      <p>
+        The one you’ll meet the most when you start programming is SyntaxError and TypeError.
+      </p>
+      <p>
+        Here’s an example of SyntaxError, you forget one quotation mark and your code doesn’t work anymore. But it’s okay
+        it happens to everyone and you can always see in the console what line has an error. So <b>good luck debugging!</b>
+      </p>
+      <img style="width:70%; border-radius: 10px;" src="../../pictures/problem-solving/syntaxerror.png">
+    </div>
+    <div id="help" class="divider" style="color:white;">
+      ASK FOR HELP
+    </div>
+    <div class="main-info">
+      <p>
+        You’ve tried all these methods and nothing works? Then it’s time to ask for help. You can ask your friend, your
+        teacher, your colleague or go and post your question on Stack Overflow(in case the answer isn’t already there).
+        There’s nothing wrong with asking for help so don’t hesitate and do that instead of being stuck on a problem for
+        hours. Make sure you’ve already talked to rubber ducky and have the right question to ask!
+      </p>
+    </div>
+    <div id="reflect" class="divider" style="color:white;">
+      REFLECT
+    </div>
+    <div class="main-info">
+      <p>
+        Another good way to problem solve is to reflect on what you’ve done. You can get a better understanding of the
+        problem if you look at the whole code and analyse your previous actions rather than being stuck on one small part
+        of it. It’s helpful to take a break from a screen and distract yourself with some manual tasks like doing dishes
+        or gardening to get an insight on your problem.
+      </p>
+    </div>
+</body>
+
+</html>

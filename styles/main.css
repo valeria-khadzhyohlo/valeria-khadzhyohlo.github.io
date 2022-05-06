@@ -1,34 +1,154 @@
 :root {
-  --beige: #ffdac6;
-  --light-orange: #e0b7a3;
-  --pink: #a560480f;
-  --light-green: #a1714d;
+  --orange: #fa7d00f0;
+  --light-gray: rgb(228, 228, 228);
+  --pink: #ff8a0b;
+  --light-green: #485348;
 }
+
+#heading{
+  margin-left: 0.5vh;
+}
+
+#flowerImg:hover{
+  background-color: white;
+}
+
+#core{
+  background-image: url("../pictures/nordwood-themes-wt4gUtdv1-U-unsplash.jpg");
+  margin-right: 0;
+  background-size: cover;
+}
+#ducky{
+  background-image: url("../pictures/problem-solving/nick-fewings-d5sK_-sVFSA-unsplash.jpg");
+  margin-right: 0;
+  background-size: cover;
+}
+
+#tech1{
+  background-image: url("../pictures/jj-ying-WmnsGyaFnCQ-unsplash.jpg");
+  background-size: cover;
+}
+
+#jsImage{
+  background-image: url("../pictures/claudio-schwarz-i25aqE_YUZs-unsplash.jpg");
+  background-size: cover;
+  margin-left: 0.5vh;
+}
+
+#eQ{
+  all:initial;
+  justify-content: center;
+  font-size: 0.5em;
+}
+
+a{
+  text-decoration: none;
+  color: var(--light-gray);
+  font-size: 0.75em;
+  text-align: center;
+}
+
+
 html {
   box-sizing: border-box;
 }
 body {
-  background-color: var(--beige);
-  background-image: url('../pictures/bg.jpg');
+  background-color: #fa7d00f0;
   background-size: 100vw;
   display: flex;
   min-height: 100vh;
 }
-h1 {
+li{
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px 10px;
+  width:50%;
   font-family: 'Saira Condensed', sans-serif;
-  color: var(--light-green);
-  margin: 0 200px 50px;
+  font-size: 3em;
+  color: var(--light-gray);
   text-align: justify;
-  font-size: 22px;
+  align-content: center;
+  object-fit: cover;
+  transition: 1s;
 }
-h2 {
-  font-family: 'Saira Condensed', sans-serif;
-  color: var(--light-green);
-}
-a {
-  color: white;
+li:hover{
+  background-color: var(--orange);
+  color:white;
 }
 
+span{
+  color: var(--orange);
+}
+span:hover{
+  color:white;
+}
+
+.code{
+  background-color: #b5b5b5d1;
+  color:white;
+  border-radius: 10px;
+}
+.code:hover{
+  background-color: var(--orange);
+}
+
+.h1{
+  display: flex;
+  margin:0;
+  color:white;
+  justify-content: flex-end;
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 0.75em;
+  padding: o;
+  line-height: 0.3em;
+  
+}
+
+
+
+.divider{
+  display: flex;
+  background-color: var(--light-gray);
+  border-radius: 10px;
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 3em;
+  color: white;
+  align-content:center;
+  justify-content: center;
+  
+  padding: 40px 0;
+}
+
+
+.initial{
+  all:initial;
+  list-style: none;
+  font-size: 0.5em;
+}
+.threeSpaces{
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px 30px;
+  height: 40vh;
+  width:33%;
+  justify-content: center;
+  align-content: center;
+  margin-right: 0.5vh;
+  font-size: 7em;
+}
+.threeSpaces:nth-of-type(2){
+  font-family:sans-serif; 
+  font-size:22px; 
+  color:rgb(118, 117, 117);
+
+}
+.threeSpaces:nth-of-type(3){
+  background-image: url("../pictures/kobu-agency-ipARHaxETRk-unsplash.jpg");
+  margin-right: 0;
+  background-size: cover;
+  
+}
 /* The side navigation menu */
 .sidenav {
   height: 100%; /* 100% Full-height */
@@ -38,45 +158,32 @@ a {
   left: 0;
   background-color: transparent;
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 0 0; /* Place content 60px from the top */
+  padding: 0 0; 
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   writing-mode: vertical-lr;
-  margin-left: 20px;
+  margin-left: -2.5vw;
   transform: rotate(180deg);
 }
 
 /* The navigation menu links */
 .sidenav a {
-  font-family: 'Codystar', cursive;
-  font-weight: 900;
+  font-family: 'Saira Condensed', sans-serif;
   padding: 0 0;
   text-decoration: none;
-  font-size: 8vh;
-  color: var(--light-green);
+  font-size: 11.9vh;
+  color: whitesmoke;
   display: inline;
   transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-  color: rgba(144, 169, 79);
+  color: rgb(136, 136, 136);
 }
 
-.main-container {
-  transition: margin-left 0.5s;
-  width: 100%;
-  flex-direction: row;
-}
-.across-panel {
-  flex-direction: row;
-  height: 300px;
-  margin-left: 0;
-  background-color: var(--pink);
-}
-.border {
-  border-top: 10px solid var(--pink);
-  border-bottom-style: 0;
-}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
 
 .image-container {
   display: flex;
@@ -84,79 +191,60 @@ a {
   align-items: center;
   height: 300px;
   justify-content: space-evenly;
-  width: 70%;
-  margin: auto;
-  background-color: var(--light-orange);
-  border: 0px solid white;
-  border-radius: 50%;
+  margin: 0.5vh 0;
 }
 .image {
+  background-color: white;
+  border-radius: 10px;
   width: 15vw;
   height: auto;
-  transition: all 1s;
+  transition: all 2s;
+  padding: 0 80px;
 }
 
-.image:hover {
-  background-color: rgba(144, 169, 79, 0.867);
-  border: 0px solid white;
-  border-radius: 30%;
+.image:nth-of-type(1):hover {
+  background-size: 100px;
+  background-color: var(--orange);
+}
+
+
+.main-container{
+  transition: margin-left 0.5s;
+  flex-direction: row;
+  width:92vw;
+  margin: auto;
+  margin-right: 0vh;
+  margin-top: 0vh;
+  
 }
 
 .main-info {
-  background-color: #e3c0af80;
+  display: flexbox;
+  flex-direction:row;
+  background-color: white;
   text-align: justify;
   font-family: 'Saira Condenses', sans-serif;
-  font-size: 20px;
-  border-top: 7px solid var(--light-green);
-  border-bottom: 7px solid var(--light-green);
-
-  border-right: none;
-  border-left: none;
-  padding: 30px 30px;
-  margin: 100px 200px;
+  font-size: 1.5em;
+  color:grey;
+  border-radius: 10px;
+  padding: 5em 5em;
+  margin: 0.5vh 0;
 }
-.main-text {
-  color: rgb(67, 44, 26);
-  display: flex;
+
+
+
+
+.main-table{
+  display:flex;
   flex-direction: row;
-  align-items: center;
-  text-align: justify;
-  margin-right: 200px;
-  font-family: 'Saira Condenses', sans-serif;
-  font-size: 20px;
-  border-top: 7px solid var(--light-green);
-  border-bottom: 7px solid var(--light-green);
-  border-style: dotted;
-  border-right: none;
-  border-left: none;
-  padding: 30px 0;
-  margin: 0 200px 50px;
-}
-
-.tech-images {
-  display: inline-block;
-  width: 100%;
-  margin: auto;
-  border: 5px solid orange;
-  padding: 4vh 0;
-  margin-top: 2vh;
-}
-.tech-images img {
-  height: 40vh;
-  width: auto;
-  margin: 0 4.5vw;
-}
-.face {
-  display: flex;
-  width: 25vw;
-  align-items: center;
-  margin: 0 auto;
+  list-style: none;
+  margin: 0.5vh 0;
   padding: 0;
 }
 
-.code {
-  background-color: #efded6;
-  color: #a1714d;
+.margin-images{
+  display: flex;
+  flex-direction: row;
 }
 
 @media screen and (max-height: 450px) {
@@ -166,40 +254,79 @@ a {
   .sidenav a {
     font-size: 18px;
   }
+  .main-info{
+    padding: 0;
+  }
 }
 @media (max-width: 575.98px) {
-  h1 {
-    justify-content: space-evenly;
-    font-size: 1.4vh;
-    margin-left: 120px;
+  .main-container{
+    width:70vw;
+    margin-right:0;
   }
+  .sidenav a{
+    font:5vh;
+  }
+  .main-info{
+    padding: 0;
+  }
+  .divider{
+    font-size: 0.5em;
+    padding: 5px 0;
+  }
+  .sidenav{
+    display:none;
+  }
+  
 }
 @media (max-width: 767.98px) {
-  h1 {
-    justify-content: space-evenly;
-    font-size: 1.6vh;
-    margin-left: 130px;
+  .main-container{
+    width:75vw;
+    margin:auto;
   }
-  .main-text {
-    flex-direction: column;
+  .sidenav a{
+    font:8vh;
   }
+  .main-info{
+    padding: 0;
+  }
+  .divider{
+    font-size: 1em;
+    padding: 10px 0;
+  }
+  .sidenav{
+    display:none;
+  }
+  
 }
 
 @media (max-width: 991.98px) {
-  h1 {
-    justify-content: space-evenly;
-    font-size: 1.5vw;
-    margin-left: 140px;
+  .main-container{
+    width:80vw;
+    margin-right: 0;
   }
-  .main-text {
-    flex-direction: column;
+  .sidenav a{
+    font:10vh;
+  }
+  .main-info{
+    padding: 0;
+  }
+  .divider{
+    font-size: 1.5em;
+    padding: 20px 0;
   }
 }
 
 @media (max-width: 1199.98px) {
-  h1 {
-    justify-content: space-evenly;
-    font-size: vw;
-    margin-left: 180px;
+  .main-container{
+    width:87vw;
+    margin-right: 0;
   }
+  .sidenav a{
+    font:11vh;
+  }
+  .divider{
+    font-size: 2em;
+    padding: 20px 0;
+  }
+  
 }
