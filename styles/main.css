@@ -163,6 +163,7 @@ span:hover{
   writing-mode: vertical-lr;
   margin-left: -2.5vw;
   transform: rotate(180deg);
+  transition: transform 0s;
 }
 
 /* The navigation menu links */
@@ -247,6 +248,19 @@ span:hover{
   flex-direction: row;
 }
 
+.quotes{
+  display: flexbox;
+  flex-direction:row;
+  background-color: rgb(255 120 0 / 6%);
+  text-align: justify;
+  font-family: 'Saira Condenses', sans-serif;
+  font-size: 20px;
+  color:grey;
+  padding: 10px;
+  margin: 0.5vh 0;
+
+}
+
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;
@@ -280,14 +294,14 @@ span:hover{
 }
 @media (max-width: 767.98px) {
   .main-container{
-    width:75vw;
+    width:80vw;
     margin:auto;
   }
   .sidenav a{
     font:8vh;
   }
   .main-info{
-    padding: 0;
+    padding: 3px;
   }
   .divider{
     font-size: 1em;
